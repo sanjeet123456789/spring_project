@@ -9,5 +9,7 @@
 <body>
 <h2>Thisis very good</h2>
 <a href="test/hello">hello</a> 
+<a href="api/students">student list</a> 
+<a href="api/students/0">one student</a> 
 </body>
 </html>

@@ -30,7 +30,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 //		
 
 		auth.jdbcAuthentication().dataSource(securityDataSource);
-
+		//password john:fun123
 	}
 
 	@Override
