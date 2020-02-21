@@ -9,6 +9,6 @@
 <body>
 <h1>Thisis from spring crud demos</h1>
 <a href="${pageContext.request.contextPath}/api/customers">Get all customers</a>
-<a href="${pageContext.request.contextPath}/api/customers/1">Get one customers</a>
+<a href="${pageContext.request.contextPath}/api/customers/3">Get one customers</a>
 </body>
 </html>
