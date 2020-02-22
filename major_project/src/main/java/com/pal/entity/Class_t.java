@@ -7,34 +7,33 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name="class_t")
 public class Class_t {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
-	
 	@Column(name="class")
-	private String class_name;
+	private String className;
 	
 	@Column(name="section")
 	private String section;
-
+	
+	public Class_t() {}
 	
 	
-	public Class_t() {
-		
-	}
-
-	public Class_t(int id, String class_name, String section) {
+	
+	public Class_t(int id, String className, String section) {
 		
 		this.id = id;
-		this.class_name = class_name;
+		this.className = className;
 		this.section = section;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -44,12 +43,12 @@ public class Class_t {
 		this.id = id;
 	}
 
-	public String getClass_name() {
-		return class_name;
+	public String getClassName() {
+		return className;
 	}
 
-	public void setClass_name(String class_name) {
-		this.class_name = class_name;
+	public void setClassName(String className) {
+		this.className = className;
 	}
 
 	public String getSection() {
@@ -62,10 +61,10 @@ public class Class_t {
 
 	@Override
 	public String toString() {
-		return "Class_t [id=" + id + ", class_name=" + class_name + ", section=" + section + "]";
+		return "Class_t [id=" + id + ", className=" + className + ", section=" + section + "]";
 	}
 	
 	
 	
-	
+
 }
