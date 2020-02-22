@@ -8,12 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.pal.dao.ClassDao;
 import com.pal.dao.CustomerDao;
-import com.pal.dao.SubjectDao;
-import com.pal.dao.TeachersDao;
 import com.pal.entity.Class_t;
 import com.pal.entity.Customer;
-import com.pal.entity.Subject_t;
-import com.pal.entity.Teachers_t;
 
 
 @Service
@@ -89,72 +85,6 @@ public class CustomerServiceImpl implements CustomerService {
 		classdao.deleteClass_t(theId);
 	}
 
-	
-		//This is for Teachers_t
-	//this is for Teacjhers_table
-	@Autowired
-	private TeachersDao teachersdao;
-	
-	@Override
-	@Transactional
-	public List<Teachers_t> getTeachers_ts() {
-		return teachersdao.getTeachers_ts();
-	}
-
-	@Override
-	@Transactional
-	public void saveTeachers_t(Teachers_t theTeachers_t) {
-
-		teachersdao.saveTeachers_t(theTeachers_t);
-	}
-
-	@Override
-	@Transactional
-	public Teachers_t getTeachers_t(int theId) {
-		
-		return teachersdao.getTeachers_t(theId);
-	}
-
-	@Override
-	@Transactional
-	public void deleteTeachers_t(int theId) {
-		
-		teachersdao.deleteTeachers_t(theId);
-	}
-	
-	
-	//Thisi is for subject_T
-	//This is sdfadsfad for SUbject_tables
-	
-	@Autowired
-	private SubjectDao subjectdao;
-	
-	@Override
-	@Transactional
-	public List<Subject_t> getSubject_ts() {
-		return subjectdao.getSubject_ts();
-	}
-
-	@Override
-	@Transactional
-	public void saveSubject_t(Subject_t theSubject_t) {
-
-		subjectdao.saveSubject_t(theSubject_t);
-	}
-
-	@Override
-	@Transactional
-	public Subject_t getSubject_t(int theId) {
-		
-		return subjectdao.getSubject_t(theId);
-	}
-
-	@Override
-	@Transactional
-	public void deleteSubject_t(int theId) {
-		
-		subjectdao.deleteSubject_t(theId);
-	}
 	
 
 }
