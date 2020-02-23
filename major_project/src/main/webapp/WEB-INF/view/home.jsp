@@ -35,8 +35,11 @@
 	<security:authorize access="hasRole('ADMIN')">
 	<p><a href="${pageContext.request.contextPath}/admin/customer/list">this is only for admin</a></p>
 	<p><a href="${pageContext.request.contextPath}/admin/class_t/listClass">this is only forclass</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/teachers_t/listTeachers">this is only forclass</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/subject_t/listSubject">this is only forclass</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/teachers_t/listTeachers">this is only forteacher</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/subject_t/listSubject">this is only forsubject</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/teacher_subject_t/listTeacher_subject">this is only forteacher_subject</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/check_subject_t/listCheck_subject">this is only for Check subject</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/check_busy_t/listCheck_busy">this is only for Check busy</a></p>
 	
 	</security:authorize>
 	<!--  Add a link for the admin user -->
