@@ -29,7 +29,7 @@ public class Pdfdemos {
 			document.add(para);
 			
 			document.add(new Paragraph(" "));document.add(new Paragraph(" "));
-			PdfPTable table=new PdfPTable(3);
+			PdfPTable table=new PdfPTable(4);
 			PdfPCell c1=new PdfPCell(new Phrase("Heading 1"));
 			table.addCell(c1);
 			

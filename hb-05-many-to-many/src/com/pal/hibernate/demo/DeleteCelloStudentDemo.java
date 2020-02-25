@@ -33,7 +33,7 @@ public class DeleteCelloStudentDemo {
 			//start transaction
 			session.beginTransaction();
 			//get the student mary  from database
-			int studentId=2;
+			int studentId=2; 
 			Student tempStudent=session.get(Student.class, studentId);
 			System.out.println("\n loaded mary info"+tempStudent.getLastName());
 			//create more courses

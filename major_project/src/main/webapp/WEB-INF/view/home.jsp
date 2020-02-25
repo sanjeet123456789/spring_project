@@ -40,6 +40,7 @@
 	<p><a href="${pageContext.request.contextPath}/admin/teacher_subject_t/listTeacher_subject">this is only forteacher_subject</a></p>
 	<p><a href="${pageContext.request.contextPath}/admin/check_subject_t/listCheck_subject">this is only for Check subject</a></p>
 	<p><a href="${pageContext.request.contextPath}/admin/check_busy_t/listCheck_busy">this is only for Check busy</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/generate_pdf/online">generate PDf</a></p>
 	
 	</security:authorize>
 	<!--  Add a link for the admin user -->
