@@ -1,0 +1,17 @@
+{
+	"id":14,
+	"firstName":"Sanjeet",
+	"lastName":"pal",
+	"active":"true",
+	"address":{
+		"street":"Lc-A",
+		"city":"Chandigarh",
+		"state":"punjab",
+		"zip":"140301",
+		"country":"India"
+		},
+	"language":["hindi","english","sanjskrit","german"],
+	"company":"pal"
+
+
+}
