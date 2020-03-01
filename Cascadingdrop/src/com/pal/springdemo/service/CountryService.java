@@ -8,4 +8,6 @@ public interface CountryService {
 	
 	public List<Country> findAll();
 	
+	public Country find(int id);
+	
 }

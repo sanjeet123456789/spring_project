@@ -7,4 +7,6 @@ import com.pal.springdemo.entity.Country;
 public interface CountryDao {
 	
 	public List<Country> findAll();
+	
+	public Country find(int id);
 }

@@ -10,14 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.google.gson.JsonElement;
-
 
 
 @Entity
-@Table(name="Country")
-public class Country {
-	
+@Table(name="State")
+public class StateEntity {
 	
 	
 	@Id
@@ -26,13 +23,16 @@ public class Country {
 	private int id;
 	
 	@Column(name="name")
-	private String country_name;
+	private String state_name;
 	
+	
+	@Column(name="country_id")
+	private int country_id;
 
 	
 
 	
-	public Country() {}
+	public StateEntity() {}
 
 
 
@@ -54,16 +54,40 @@ public class Country {
 
 
 
-	public String getCountry_name() {
-		return country_name;
+
+
+
+
+	public String getState_name() {
+		return state_name;
 	}
 
 
 
 
 
-	public void setCountry_name(String country_name) {
-		this.country_name = country_name;
+	public void setState_name(String state_name) {
+		this.state_name = state_name;
+	}
+
+
+
+
+	
+
+
+
+
+	public int getCountry_id() {
+		return country_id;
+	}
+
+
+
+
+
+	public void setCountry_id(int country_id) {
+		this.country_id = country_id;
 	}
 
 
@@ -72,17 +96,22 @@ public class Country {
 
 	@Override
 	public String toString() {
-		return "Country_e [id=" + id + ", country_name=" + country_name + "]";
+		return "State [id=" + id + ", state_name=" + state_name + ", country_id=" + country_id + "]";
 	}
 
 
 
 
 
-	public JsonElement getStates() {
-		
-		return null;
-	}
+
+	
+
+
+
+
+
+
+
 	
 	
 	
