@@ -2,7 +2,7 @@ package com.pal.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class MySpringMvcDispatcherServletInitilizer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -13,13 +13,13 @@ public class MySpringMvcDispatcherServletInitilizer extends AbstractAnnotationCo
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class [] {DemoAppConfig.class};
+		return new Class[] { DemoAppConfig.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
 		// TODO Auto-generated method stub
-		return new String [] {"/"};
+		return new String[] {"/"};
 	}
 
 }

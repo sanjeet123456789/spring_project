@@ -26,15 +26,12 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
-@ComponentScan("com.pal")
+@ComponentScan(basePackages="com.pal")
 @PropertySource({ "classpath:persistence-mysql-customer.properties" })
 public class DemoAppConfig implements WebMvcConfigurer {
-
 	@Autowired
 	private Environment env;
-	
 	private Logger logger = Logger.getLogger(getClass().getName());
-	
 	// define a bean for ViewResolver
 	//mydatasource for connection pool
 	@Bean
@@ -44,8 +41,6 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		viewResolver.setSuffix(".jsp");
 		return viewResolver;
 	}
-	
-	
 	@Bean
 	public DataSource myDataSource() {
 		
@@ -77,7 +72,6 @@ public class DemoAppConfig implements WebMvcConfigurer {
 
 		return myDataSource;
 	}
-	
 	private Properties getHibernateProperties() {
 
 		// set hibernate properties
@@ -88,8 +82,6 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		
 		return props;				
 	}
-
-	
 	// need a helper method 
 	// read environment property and convert to int
 	
@@ -102,7 +94,6 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		
 		return intPropVal;
 	}	
-	
 	@Bean
 	public LocalSessionFactoryBean sessionFactory(){
 		
@@ -115,8 +106,7 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		sessionFactory.setHibernateProperties(getHibernateProperties());
 		
 		return sessionFactory;
-	}
-	
+	}	
 	@Bean
 	@Autowired
 	public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {

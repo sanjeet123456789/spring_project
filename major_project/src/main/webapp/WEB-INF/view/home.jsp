@@ -1,5 +1,4 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %> 
 
 
@@ -43,6 +42,10 @@
 	<p><a href="${pageContext.request.contextPath}/admin/generate_pdf/online">generate PDf</a></p>
 	
 	</security:authorize>
+	
+	<p><a href="${pageContext.request.contextPath}/admin/customer/list">this is only for admin</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/class_t/listClass">this is only forclass</a></p>
+	
 	<!--  Add a link for the admin user -->
 	<!-- Add a logout button -->
 	<form:form action="${pageContext.request.contextPath}/logout" 
