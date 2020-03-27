@@ -1,3 +1,5 @@
+
+
 DROP TABLE IF EXISTS `class_t`;
 CREATE TABLE `class_t`(
 	`id` int(11) NOT NULL AUTO_INCREMENT,

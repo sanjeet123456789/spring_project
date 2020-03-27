@@ -11,12 +11,13 @@ import org.springframework.stereotype.Repository;
 import com.pal.entity.Check_subject;
 import com.pal.entity.Class_t;
 
+
+//sanjeet pal
 @Repository
 public class Check_subjectImpl implements Check_subjectDao{
 	
 	@Autowired
 	private SessionFactory sessionFactory;
-	
 	
 	
 	@Override
