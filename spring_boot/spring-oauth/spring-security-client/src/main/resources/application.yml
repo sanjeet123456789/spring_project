@@ -1,0 +1,23 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /ui
+    session:
+      cookie:
+        name: PALSESSION
+     
+security:
+  oauth2:
+    client:
+      client-id: ClientId
+      client-secret: secret
+      access-token-uri: http://localhost:8081/auth/oauth/token
+      user-authorization-uri: http://localhost:8081/auth/oauth/authorize #redirect url
+    resource:
+      user-info-uri: http://localhost:8081/auth/rest/sanjeet/principal
+      
+spring:
+  thymeleaf:
+    cache: false
+
+      
