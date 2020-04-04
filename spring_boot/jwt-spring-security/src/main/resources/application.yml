@@ -1,0 +1,25 @@
+management: 
+  security:
+    enabled:true
+    
+spring: 
+  resources: 
+    chain: 
+      enabled: true
+  
+  
+server: 
+  port: 9635
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
