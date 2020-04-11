@@ -1,0 +1,8 @@
+applications:
+- name: pal-microservice
+path: target/pcf-circuit-breaker.jar
+domain: cfapps.io
+memory: 700M
+instances: 1
+services:
+- pal-circuit-breaker
