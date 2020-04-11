@@ -1,0 +1,10 @@
+applications:
+- name: sanjeet-pcf-config-server
+path: target/sanjeet-cloud-config.jar
+domain: cfapps.io
+memory: 700M
+instances: 1
+services:
+- sanjeetConfigServer 
+
+
