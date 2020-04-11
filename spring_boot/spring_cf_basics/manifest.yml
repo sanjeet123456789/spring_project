@@ -1,0 +1,6 @@
+applications:
+- name: pal-Developer
+path: target/spring_cf_basics-0.0.1-SNAPSHOT.jar
+domain: cfapps.io
+memory: 750M
+instances: 1
