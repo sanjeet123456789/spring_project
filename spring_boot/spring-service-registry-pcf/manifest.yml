@@ -1,0 +1,9 @@
+applications:
+- name: pal-service-regisrty
+path: target/sanjeet-service-registry.jar
+domain: cfapps.io
+memory: 700M
+instances: 1
+services:
+- sanjeet-service-registry
+
