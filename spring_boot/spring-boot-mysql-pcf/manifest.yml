@@ -1,0 +1,8 @@
+applications:
+- name: pal-developer-mysql-project
+path: target/spring-boot-mysql-pcf-0.0.1-SNAPSHOT.jar
+domain: cfapps.io
+memory: 800M
+instances: 1
+services:
+- pal-developer-mysql
