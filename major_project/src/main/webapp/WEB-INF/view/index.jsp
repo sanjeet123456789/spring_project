@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/customer/list">got go customer list</a>
+<a href="${pageContext.request.contextPath}/">Time table</a>
 </body>
 </html>

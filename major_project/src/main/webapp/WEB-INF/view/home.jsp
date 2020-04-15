@@ -5,15 +5,15 @@
 <html>
 
 <head>
-	<title>luv2code Company Home Page</title>
+	<title>Time table generation system</title>
 </head>
 
 <body>
-	<h2>luv2code Company Home Page</h2>
+	<h2>Time Table</h2>
 	<hr>
 	
 	<p>
-	Welcome to the luv2code company home page!
+	Major Project(create by:sanjeet and pradeep)
 	</p>
 	<!--  display username and role -->
 	
@@ -32,19 +32,19 @@
 	</security:authorize>
 	
 	<security:authorize access="hasRole('ADMIN')">
-	<p><a href="${pageContext.request.contextPath}/admin/customer/list">this is only for admin</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/class_t/listClass">this is only forclass</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/teachers_t/listTeachers">this is only forteacher</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/subject_t/listSubject">this is only forsubject</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/teacher_subject_t/listTeacher_subject">this is only forteacher_subject</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/check_subject_t/listCheck_subject">this is only for Check subject</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/check_busy_t/listCheck_busy">this is only for Check busy</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/generate_pdf/online">generate PDf</a></p>
+	<!-- <p><a href="${pageContext.request.contextPath}/admin/customer/list">this is only for admin</a></p>-->
+	<p><a href="${pageContext.request.contextPath}/admin/class_t/listClass">Crete class</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/teachers_t/listTeachers">Create Teachers</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/subject_t/listSubject">Create Subejects</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/teacher_subject_t/listTeacher_subject">Connect teacher with subject</a></p>
+	  <p><a href="${pageContext.request.contextPath}/admin/check_subject_t/listCheck_subject">CheckSubject</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/check_busy_t/listCheck_busy">Check Busy</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/generate_pdf/online">Generate PDf</a></p>
 	
 	</security:authorize>
 	
-	<p><a href="${pageContext.request.contextPath}/admin/customer/list">this is only for admin</a></p>
-	<p><a href="${pageContext.request.contextPath}/admin/class_t/listClass">this is only forclass</a></p>
+	<!-- <p><a href="${pageContext.request.contextPath}/admin/customer/list">this is only for admin</a></p>
+	<p><a href="${pageContext.request.contextPath}/admin/class_t/listClass">this is only forclass</a></p>-->
 	
 	<!--  Add a link for the admin user -->
 	<!-- Add a logout button -->

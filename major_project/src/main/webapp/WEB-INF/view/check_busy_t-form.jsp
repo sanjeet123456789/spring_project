@@ -4,7 +4,7 @@
 <html>
 
 <head>
-	<title>Save Customer</title>
+	<title>Check Busy</title>
 
 	<link type="text/css"
 		  rel="stylesheet"
@@ -19,12 +19,12 @@
 	
 	<div id="wrapper">
 		<div id="header">
-			<h2>CRM - Customer Relationship Manager</h2>
+			<h2>Time table</h2>
 		</div>
 	</div>
 
 	<div id="container">
-		<h3>Save Customer</h3>
+		<h3>Save CheckBusy</h3>
 	
 		<form:form action="saveCheck_busy_t" modelAttribute="check_busy_t" method="POST">
 		<!-- need to associate this data with customer id -->
@@ -61,7 +61,7 @@
 		<div style="clear; both;"></div>
 		
 		<p>
-			<a href="${pageContext.request.contextPath}/admin/check_busy_t/listCheck_busy">Back to List</a>
+			<a href="${pageContext.request.contextPath}/">Back to List</a>
 		</p>
 	
 	</div>

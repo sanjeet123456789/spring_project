@@ -23,8 +23,8 @@ import com.pal.entity.Class_t;
 
 public class Pdfdemos {
 		
-	private static String USER_PASSWORD = "password";
-	private static String OWNER_PASSWORD = "lokesh";
+//	private static String USER_PASSWORD = "password";
+//	private static String OWNER_PASSWORD = "pal";
 	//				writer.setEncryption(USER_PASSWORD.getBytes(),
 //			                OWNER_PASSWORD.getBytes(), PdfWriter.ALLOW_PRINTING |PdfWriter.ALLOW_ASSEMBLY|
 //			                PdfWriter.ALLOW_COPY|
@@ -38,7 +38,7 @@ public class Pdfdemos {
 	
 		public PdfWriter generate_pdf() {
 			try {
-				String file_name="d:\\sanjeet8.pdf";
+				String file_name="/home/sanjeet/Downloads/sanjeet8.pdf";
 				Document document= new Document();
 				PdfWriter writer=PdfWriter.getInstance(document, new FileOutputStream(file_name));
 				document.open();
@@ -49,12 +49,14 @@ public class Pdfdemos {
 				PreparedStatement ps=null;
 				ResultSet rs=null;
 				String query="select * from class_t";
-				String user="springstudent";
-				String pass="springstudent";
+				String user="pal";
+				String pass="viwekkumarpal";
 				String jdbcUrl="jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false";
 				String driver="com.mysql.jdbc.Driver";
 				Connection myconn=DriverManager.getConnection(jdbcUrl,user,pass);
+				System.out.println("first comment");
 				ps=myconn.prepareStatement(query);
+				System.out.println("second comment");
 				rs=ps.executeQuery();
 				
 				
@@ -83,8 +85,10 @@ public class Pdfdemos {
 								boolean flag = false;
 								
 								while(flag==false) {
+									System.out.println("third comment");
 								String query_subject="select * from subject_t where s_class= "+rs.getString("class")+ " ORDER BY RAND() LIMIT 1" ;
 								PreparedStatement	p_subject_t=myconn.prepareStatement(query_subject);
+								System.out.println("fourth comment");
 								ResultSet r_subject_t=p_subject_t.executeQuery();
 								r_subject_t.first();
 								
@@ -96,8 +100,9 @@ public class Pdfdemos {
 								String argument1=" \""+rs.getString(2)+rs.getString(3)+"\" ";
 								String argument2= " \""+r_subject_t.getString(2)+"\" ";
 //								System.out.println(argument2);
-								String query_teacher="select * from check_subject where  class_section = "+argument1+"and subject_name= "+argument2+" ORDER BY RAND() LIMIT 1" ;
+								String query_teacher="select * from Check_subject where  class_section = "+argument1+"and subject_name= "+argument2+" ORDER BY RAND() LIMIT 1" ;
 								PreparedStatement	p_teachers_t=myconn.prepareStatement(query_teacher);
+								System.out.println("fifth comment");
 								ResultSet r_teacher_t=p_teachers_t.executeQuery(); 
 								r_teacher_t.first();
 								
@@ -107,9 +112,9 @@ public class Pdfdemos {
 									if(r_teacher_t.first()==true) {
 										System.out.println(" teacher found");
 										
-										String check_busy_teacher_t="select * from check_busy where teachers_id="+"\""+r_teacher_t.getInt(1)+"\" "+"and day="+"\""+days_in_week[i]+"\" ";
+										String check_busy_teacher_t="select * from Check_busy where teachers_id="+"\""+r_teacher_t.getInt(1)+"\" "+"and day="+"\""+days_in_week[i]+"\" ";
 										PreparedStatement check_busy_teacher_prepared_statement=myconn.prepareStatement(check_busy_teacher_t);
-										
+										System.out.println("sixth comment");
 										ResultSet check_teacher_busy_t=check_busy_teacher_prepared_statement.executeQuery();
 										check_teacher_busy_t.first();
 										System.out.println(check_teacher_busy_t.first());
@@ -120,7 +125,7 @@ public class Pdfdemos {
 											
 											
 											
-											String set_check_busy="insert into check_busy (day,period,teachers_id) values ("+"\""+days_in_week[i]+"\" "+","+j+","+"\""+r_teacher_t.getInt(4)+"\" "+")";
+											String set_check_busy="insert into Check_busy (day,period,teachers_id) values ("+"\""+days_in_week[i]+"\" "+","+j+","+"\""+r_teacher_t.getInt(4)+"\" "+")";
 											PreparedStatement prepared_set_chek_busy=myconn.prepareStatement(set_check_busy);
 											prepared_set_chek_busy.execute();
 											
@@ -174,7 +179,7 @@ public class Pdfdemos {
 										
 										//check she is busy or not 
 										
-										String check_busy_teacher_t="select * from check_busy where teachers_id="+"\""+r_select_teacher_t.getInt(1)+"\" "+"and day="+"\""+days_in_week[i]+"\" ";
+										String check_busy_teacher_t="select * from Check_busy where teachers_id="+"\""+r_select_teacher_t.getInt(1)+"\" "+"and day="+"\""+days_in_week[i]+"\" ";
 										PreparedStatement check_busy_teacher_prepared_statement=myconn.prepareStatement(check_busy_teacher_t);
 										
 										ResultSet check_teacher_busy_t=check_busy_teacher_prepared_statement.executeQuery();
@@ -184,12 +189,12 @@ public class Pdfdemos {
 											System.out.println("not busy");
 											//set  teacher in check subject
 //											insert into check_subject (class_section,subject_name,teachers_id) values("48B","Mathe",1);
-											String set_check_subject="insert into check_subject (class_section,subject_name,teachers_id) values( "+"\""+rs.getString(2)+rs.getString(3)+"\" "+","+"\""+r_select_subject_t.getInt(1)+"\" "+","+"\""+r_select_teacher_t.getInt(1)+"\" "+")";
+											String set_check_subject="insert into Check_subject (class_section,subject_name,teachers_id) values( "+"\""+rs.getString(2)+rs.getString(3)+"\" "+","+"\""+r_select_subject_t.getInt(1)+"\" "+","+"\""+r_select_teacher_t.getInt(1)+"\" "+")";
 											PreparedStatement prepared_set_check_subject=myconn.prepareStatement(set_check_subject);
 											prepared_set_check_subject.execute();
 											
 											
-											String set_check_busy="insert into check_busy (day,period,teachers_id) values ("+"\""+days_in_week[i]+"\" "+","+j+","+"\""+r_select_teacher_t.getInt(1)+"\" "+")";
+											String set_check_busy="insert into Check_busy (day,period,teachers_id) values ("+"\""+days_in_week[i]+"\" "+","+j+","+"\""+r_select_teacher_t.getInt(1)+"\" "+")";
 											PreparedStatement prepared_set_chek_busy=myconn.prepareStatement(set_check_busy);
 											prepared_set_chek_busy.execute();
 											
@@ -284,8 +289,8 @@ public class Pdfdemos {
 					
 					table.setWidthPercentage(100);
 					Statement statement=myconn.createStatement();
-					statement.executeUpdate("truncate check_subject");
-					statement.executeUpdate("truncate check_busy");
+//					statement.executeUpdate("truncate check_subject");
+//					statement.executeUpdate("truncate check_busy");
 					document.add(table);
 					document.newPage();
 				}

@@ -40,7 +40,7 @@ public class Generate_pdf_Controller {
 		
 		Pdfdemos pal2=new Pdfdemos();
 		pal2.generate_pdf();
-		return Files.readAllBytes(Paths.get("d:\\sanjeet8.pdf"));
+		return Files.readAllBytes(Paths.get("/home/sanjeet/Downloads/sanjeet8.pdf"));
 	}
 	
 

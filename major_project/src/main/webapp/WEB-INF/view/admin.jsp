@@ -8,6 +8,6 @@
 </head>
 <body>
 <p>This page is for admin</p>
-<a href="${pageContext.request.contextPath}">GO BACK</a>
+<a href="${pageContext.request.contextPath}/">GO BACK</a>
 </body>
 </html>
